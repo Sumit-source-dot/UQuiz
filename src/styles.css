@@ -1,0 +1,155 @@
+/* General body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.app-main {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.restart-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.restart-button:hover {
+  background-color: #45a049;
+}
+
+.app-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Container for the quiz */
+.quiz-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  counter-reset: option-counter; /* Reset the counter for options */
+}
+
+/* Header styles */
+h1 {
+  text-align: center;
+  color: white; /* Ensure visibility on dark background */
+}
+
+h2 {
+  color: #000000; /* Lighten color for visibility */
+}
+
+h3 {
+  color: #ddd; /* Lighten color for visibility */
+}
+
+/* Button styles */
+button {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 5px 0;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 100%; /* Make buttons full width */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+button:disabled {
+  background-color: #ccc; /* Grey out disabled buttons */
+  cursor: not-allowed;
+}
+
+/* Option styles */
+.option-button {
+  background-color: #f8f9fa; /* Light background for options */
+  color: #333;
+  border: 1px solid #ccc;
+  margin: 5px 0;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  width: 100%; /* Make buttons full width */
+  counter-increment: option-counter; /* Increment the counter */
+  position: relative; /* Position relative for numbering */
+}
+
+.option-button::before {
+  content: counter(option-counter) ". "; /* Add numbering before the option */
+  position: absolute;
+  left: 10px; /* Adjust the position as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+
+/* Selected option styles */
+.selected {
+  background-color: #d3d3d3; /* Light grey for selected option */
+}
+
+/* Correct answer styles */
+.correct {
+  background-color: #28a745; /* Green for correct answer */
+  color: white;
+}
+
+/* Incorrect answer styles */
+.incorrect {
+  background-color: #dc3545; /* Red for incorrect answer */
+  color: white;
+}
+
+/* Result styles */
+.result-container {
+  margin-top: 20px;
+}
+
+/* Question styles */
+.quiz-container .question {
+  opacity: 1; /* Increase opacity for better readability */
+  color: black; /* Display questions in bold black color */
+  font-weight: bold; /* Ensure the text is bold */
+}
