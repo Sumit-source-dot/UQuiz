@@ -1,7 +1,8 @@
 /* General body styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Roboto', sans-serif; /* Use a modern font */
+  background-color: #f0f0f0; /* Light background */
+  color: #333; /* Dark text for contrast */
   margin: 0;
   padding: 0;
 }
@@ -13,10 +14,12 @@ body {
 }
 
 .app-header {
-  background-color: #333;
-  color: white;
+  background-color: #ffffff; /* Light header */
+  color: #333; /* Dark text */
   padding: 1rem;
   text-align: center;
+  border-bottom: 2px solid #00ffcc; /* Add a neon border */
+  font-size: 1.5rem; /* Increase font size for better readability */
 }
 
 .app-main {
@@ -30,126 +33,146 @@ body {
 .timer {
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  color: #333; /* Dark text */
 }
 
 .restart-button {
-  background-color: #4CAF50;
-  color: white;
+  background-color: #00ffcc;
+  color: #ffffff; /* Light text */
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
   margin-top: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+  border-radius: 5px; /* Add border radius for a smoother look */
 }
 
 .restart-button:hover {
-  background-color: #45a049;
+  background-color: #00e6b8;
+  transform: scale(1.05);
 }
 
 .app-footer {
-  background-color: #333;
-  color: white;
+  background-color: #ffffff; /* Light footer */
+  color: #333; /* Dark text */
   text-align: center;
   padding: 1rem;
+  border-top: 2px solid #00ffcc;
+  font-size: 1rem; /* Increase font size for better readability */
 }
 
 /* Container for the quiz */
 .quiz-container {
   max-width: 600px;
   margin: 0 auto;
-  background: white;
+  background: #ffffff; /* Light background for the quiz container */
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  counter-reset: option-counter; /* Reset the counter for options */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  counter-reset: option-counter;
+  margin-top: 2rem; /* Add top margin for better spacing */
 }
 
 /* Header styles */
 h1 {
   text-align: center;
-  color: white; /* Ensure visibility on dark background */
+  color: #333; /* Dark text */
+  font-size: 2rem; /* Increase font size for better readability */
 }
 
 h2 {
-  color: #000000; /* Lighten color for visibility */
+  color: #333; /* Dark text */
+  font-size: 1.5rem; /* Increase font size for better readability */
 }
 
 h3 {
-  color: #ddd; /* Lighten color for visibility */
+  color: #333; /* Dark text */
+  font-size: 1.2rem; /* Increase font size for better readability */
 }
 
 /* Button styles */
 button {
-  background-color: #007bff; /* Bootstrap primary color */
-  color: white;
+  background-color: #00ffcc;
+  color: #ffffff; /* Light text */
   border: none;
-  border-radius: 5px;
+  border-radius: 5px; /* Add border radius for a smoother look */
   padding: 10px 15px;
   margin: 5px 0;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s, transform 0.2s;
-  width: 100%; /* Make buttons full width */
+  width: 100%;
 }
 
 button:hover {
-  background-color: #0056b3; /* Darker shade on hover */
-  transform: scale(1.05); /* Slightly enlarge on hover */
+  background-color: #00e6b8;
+  transform: scale(1.05);
 }
 
 button:disabled {
-  background-color: #ccc; /* Grey out disabled buttons */
+  background-color: #666;
   cursor: not-allowed;
 }
 
 /* Option styles */
 .option-button {
-  background-color: #f8f9fa; /* Light background for options */
-  color: #333;
-  border: 1px solid #ccc;
-  margin: 5px 0;
-  padding: 10px;
+  background-color: #f0f0f0; /* Light background */
+  color: #333; /* Dark text */
+  border: 1px solid #333; /* Dark border */
+  margin: 10px 0; /* Increase margin for separation */
+  padding: 15px; /* Increase padding for a more substantial feel */
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s;
-  width: 100%; /* Make buttons full width */
-  counter-increment: option-counter; /* Increment the counter */
-  position: relative; /* Position relative for numbering */
+  transition: background-color 0.3s, transform 0.2s;
+  width: 100%;
+  counter-increment: option-counter;
+  position: relative;
+  display: flex; /* Use flexbox for better alignment */
+  align-items: center;
+  border-radius: 5px; /* Add border radius for a smoother look */
 }
 
 .option-button::before {
-  content: counter(option-counter) ". "; /* Add numbering before the option */
-  position: absolute;
-  left: 10px; /* Adjust the position as needed */
-  top: 50%;
-  transform: translateY(-50%);
+  content: counter(option-counter) ". ";
+  margin-right: 10px; /* Space between number and text */
   font-weight: bold;
+  color: #333; /* Dark text */
+}
+
+.option-button:hover {
+  background-color: #444;
+  transform: scale(1.02);
 }
 
 /* Selected option styles */
 .selected {
-  background-color: #d3d3d3; /* Light grey for selected option */
+  background-color: #0056b3;
+  color: white;
 }
 
 /* Correct answer styles */
 .correct {
-  background-color: #28a745; /* Green for correct answer */
+  background-color: #28a745;
   color: white;
 }
 
 /* Incorrect answer styles */
 .incorrect {
-  background-color: #dc3545; /* Red for incorrect answer */
+  background-color: #dc3545;
   color: white;
 }
 
 /* Result styles */
 .result-container {
   margin-top: 20px;
+  font-size: 1.2rem; /* Increase font size for better readability */
+  color: #333; /* Dark text */
 }
 
 /* Question styles */
 .quiz-container .question {
-  opacity: 1; /* Increase opacity for better readability */
-  color: black; /* Display questions in bold black color */
-  font-weight: bold; /* Ensure the text is bold */
+  opacity: 1;
+  color: #333; /* Dark text */
+  font-weight: bold;
+  margin-bottom: 1rem; /* Add bottom margin for better spacing */
 }
